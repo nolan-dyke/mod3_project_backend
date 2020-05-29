@@ -26,4 +26,9 @@ class PatternsController < ApplicationController
 
         render json: @pattern
     end 
+
+    def destroy
+        @pattern = Pattern.find(params[:id])
+        @pattern.destroy
+    end 
 end
